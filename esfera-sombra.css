@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #222;
+}
+h1 {
+    text-align: center;
+    color: #aaa;
+}
+
+.esfera {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: relative;
+    /* -webkit... para que funcione el top left y no usar background-color */
+    background: -webkit-radial-gradient(top left, white, teal 50%, black);
+    background: -moz-radial-gradient(top left, white, teal 50%, black);
+    margin: auto;
+}
+
+/* con este after genero la sombra de la esfera */
+.esfera::after {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 5px;
+    background-color: #000;
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 10px #000;
+    opacity: 0.6;
+    z-index: -1;
+}
