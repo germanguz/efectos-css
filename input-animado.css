@@ -24,7 +24,7 @@ body {
     overflow: hidden;
 }
 
-.form input {
+input {
     width: 100%;
     height: 100%;
     background: none;   /* con background-color:none; no es el mismo efecto */
@@ -34,17 +34,23 @@ body {
     outline: 0px;   /* o tambien con none */
 }
 
-.form .lbl-nombre {
+.lbl-nombre {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    /* quita el no funcionamiento del mouse en label para que se pueda hacer click en input
+    porque al usar after ya no se puede seleccionar el input */
     pointer-events: none;
     border-bottom: 1px solid #c7c7c7;
 }
 
-.form .lbl-nombre:after {
+/* crea un elemento igual a lbl-nombre y lo corre a la izquierda su tamaño
+para luego usar la transición, por eso el translateX está en -100%
+lo baja -1 con bottom para tapar bien la linea original */
+/* también puedo poner en height solo 3px en lugar de 100% y el efecto es el mismo */
+.lbl-nombre:after {
     content: "";
     position: absolute;
     left: 0;
@@ -64,12 +70,19 @@ body {
     color: #fff;
 }
 
-.form input:focus + .lbl-nombre .text-nomb, .form input:valid + .lbl-nombre .text-nomb {
+/* con el signo + aplico estilos al hermano adyacente(siguiente)
+   si no se lo pongo y además saco lbl-nombre no funciona. */
+input:focus + .lbl-nombre .text-nomb, input:valid + .lbl-nombre .text-nomb {
     transform: translateY(-150%);
     font-size: 14px;
     color: #2ecece;
 }
 
-.form input:focus + .lbl-nombre:after, .form input:valid + .lbl-nombre:after {
+input:focus + .lbl-nombre:after, input:valid + .lbl-nombre:after {
     transform: translateX(0%);
 }
+
+/* + afecta al el primer hermano
+   ~ afecta a todos los hermanos siguientes
+   > afecta a los hijos directos
+     (espacio vacío) afecta a todos los hijos y nietos y sucesivos */
