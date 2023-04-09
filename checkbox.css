@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #0b1721;
+}
+
+.boton {
+    margin: 10px;
+}
+
+.lbl-switch {
+    display: inline-block;
+    width: 55px;
+    height: 30px;
+    background-color: crimson;
+    border-radius: 100px;
+    position: relative;
+    cursor: pointer;
+}
+
+.lbl-switch::after {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    background-color: #fff;
+    border-radius: 100px;
+    top: 4px;
+    left: 5px;
+    transition: 0.3s;
+}
+
+#idBoton:checked ~ .lbl-switch {
+    background-color: darkgreen;
+}
+
+#idBoton:checked ~ .lbl-switch::after {
+    left: 28px;
+}
+
+#idBoton {
+    display: none;
+}
