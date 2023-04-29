@@ -1,0 +1,35 @@
+body {
+    height: 100vh;
+    background-color: rgb(37, 37, 37);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pacman {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(#f1d76b, #f1c71c);
+    border-radius: 50%;
+    position: relative;
+}
+
+.ojo {
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    background-color: black;
+    border-radius: 50%;
+    top: 20px;
+    right: 25px;
+}
+
+.boca {
+    position: absolute;
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    border-left: 30px solid transparent;
+    border-right: 45px solid rgb(37, 37, 37);
+    top: 25px;
+    right: 0;
+}
