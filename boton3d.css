@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #090221;
+}
+
+button {
+    position: relative;
+    border: none;
+    outline: none;
+    width: 170px;
+    height: 55px;
+    background-color: #086e7d;
+    font-size: 1.4rem;
+    color: #fff;
+    border-radius: 7px;
+    cursor: pointer;
+    font-family: sans-serif;
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #024752;
+    z-index: -1;
+    border-radius: 7px;
+    transform: translateY(5px);
+}
+
+button:active {
+    transform: translateY(5px);
+}
+
+button:active::before {
+    transform: translateY(0);
+}
