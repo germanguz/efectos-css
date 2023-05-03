@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    width: 800px;
+    margin: 100px auto;
+}
+
+td, th {
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+/* para resaltar a las filas pares se usa "even" */
+tr:nth-child(even) {
+    background-color: #eee;
+}
+
+/* a partir de n+3, hasta el final, hace lo que indique. n sería como el inicio, el 0 */
+/* se usa para no repetir por cada columna a aplicar el estilo */
+td:nth-child(n + 3) {   /* el "th:nth-child(n + 3)" lo saqué porque ya tiene ese estilo */
+    text-align: center;
+}
+
+tbody tr:hover {
+    background-color: rgb(160, 222, 225);   /* llevaba un "!important" pero se lo saqué porque fciona igual */
+}
+
+thead {
+    background-color: black;
+    color: white;
+    position: sticky;
+    top: 0;
+}
