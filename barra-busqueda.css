@@ -1,0 +1,51 @@
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+.search-bar {
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    width: 700px;
+    display: flex;
+    align-items: center;
+    /* padding: 5px 10px;*/
+    padding: 0 10px;    /* *lo cambié para que llegue al borde el focus */
+    margin: 100px auto;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;   /* *al llegar al borde se "salía" y tapaba el otro borde */
+}
+
+.search-bar:focus-within {
+    border: 1px solid #aaa;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.search-bar input[type="text"] {
+    border: none;
+    outline: none;
+    padding: 12px;
+    flex: 1;
+    font-size: 18px;
+}
+
+.search-bar .actions {
+    display: flex;
+    gap: 5px;
+}
+
+.search-bar .actions button {
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    color: #999;
+    transition: color 0.3s ease-in-out;
+}
+
+.search-bar .actions button:hover {
+    color: #2979e2;
+}
