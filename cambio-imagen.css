@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: #292b36;
+}
+
+picture {
+    width: 600px;
+}
+
+source, img {
+    width: 100%;
+}
