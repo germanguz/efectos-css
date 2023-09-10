@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.img {
+    width: 300px;
+    height: 400px;
+    margin: 0 auto;
+    margin-top: 50px;
+    background-image: url('./images/land.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.img::after {
+    content: "soy un overlay";
+    font-size: 2rem;
+    color: #fff;
+    background-color: #16456198;
+    position: absolute;
+    inset: 0;   /* reemplaza a escribir top, bottom, left y right en 0 */
+    display: grid;
+    place-items: center;    /* para centrar el texto */
+    transform: translateY(100%);
+    transition: transform 0.3s;
+}
+
+.img:hover::after {
+    transform: translateY(0);
+}
