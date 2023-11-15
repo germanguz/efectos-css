@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 30%;
+    display: block;
+    margin: 30px auto;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+    filter: drop-shadow(0 0 4px blue);
+    /* el color también afecta a box-shadow */
+}
