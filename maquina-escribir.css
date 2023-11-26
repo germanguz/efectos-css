@@ -1,0 +1,25 @@
+.typing__effect {
+    margin: 50px auto;
+    width: max-content;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 2rem;
+
+    animation: teclear 3s steps(16), efecto 0.5s step-end infinite alternate;
+    /* steps(16) los 16 hacen referencia a la cantidad de caracteres */
+}
+
+@keyframes teclear {
+    from {
+        clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%); /* que no se muestre el elemento*/
+    }
+    to {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); /* que se muestre el elemento*/
+    }
+}
+
+@keyframes efecto {
+    50% {
+        border-color: transparent;
+    }
+}
